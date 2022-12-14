@@ -3,6 +3,15 @@ export type Product = {
   name: string;
   amount: string;
 };
+
+export type Users = {
+  id?: number;
+  username: string;
+  vocation: string;
+  level: number;
+  password?: string;
+};
+
 /* CREATE TABLE Trybesmith.products (
   id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
   name TEXT NOT NULL,

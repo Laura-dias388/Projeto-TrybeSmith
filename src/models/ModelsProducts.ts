@@ -16,7 +16,6 @@ const getAllProducts = async (): Promise<Product[]> => {
   const [result] = await connection.execute<RowDataPacket[] & Product[]>(
     'SELECT * FROM Trybesmith.products',
   );
-  console.log('testeeeeeeeeeeeeeeeeeeeeeee', result);
   return result;
 };
 
