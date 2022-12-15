@@ -6,7 +6,7 @@ const getAllOrders = async (_req: Request, res: Response) => {
   if (!result) {
     return res.status(404).json({ message: 'Not found' });
   }
-  return res.status(200).json({ token: result });
+  return res.status(200).json(result);
 };
 
 export default {

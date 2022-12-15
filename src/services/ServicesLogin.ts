@@ -1,10 +1,6 @@
-import dotenv from 'dotenv';
-import { createToken } from '../auth/validateToken';
-
 import { Users } from '../types';
+import { createToken } from '../auth/validateToken';
 import ModelsLogin from '../models/ModelsLogin';
-
-dotenv.config();
 
 const createLogin = async ({ username, password }: Users) => {
   const result = await ModelsLogin.createLogin(username);

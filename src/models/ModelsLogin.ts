@@ -1,5 +1,4 @@
 import { RowDataPacket } from 'mysql2/promise';
-// import { Users } from '../types';
 import connection from './connection';
 
 const createLogin = async (username: string) => {
