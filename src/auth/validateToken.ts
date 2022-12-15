@@ -18,12 +18,12 @@ const jwtConfig: SignOptions = {
   expiresIn: '1d',
 };
 
-export const createToken = async (loginWithoutPassword: TypeToken) => {
+export const createToken = (loginWithoutPassword: TypeToken) => {
   const token = jwt.sign({ data: loginWithoutPassword }, secret, jwtConfig);
   return token;
 };
 
-export const validateToken = async (token: string) => {
+export const validateToken = (token: string) => {
   try {
     if (!token) return { error: 'Token not found' };
     const validation = jwt.verify(token, secret);
