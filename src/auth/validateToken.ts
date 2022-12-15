@@ -1,9 +1,5 @@
 import jwt, { SignOptions } from 'jsonwebtoken';
 
-import dotenv from 'dotenv';
-
-dotenv.config();
-
 type TypeToken = {
   id?: number,
   username: string,

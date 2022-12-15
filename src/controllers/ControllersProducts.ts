@@ -9,6 +9,9 @@ const createProducts = async (req: Request, res: Response) => {
 
 const getAllProducts = async (_req: Request, res: Response) => {
   const result = await ServicesProducts.getAllProducts();
+  if (result.length === 0) {
+    return res.status(404).json({ message: 'Nenhum produto encontrado' });
+  }
   res.status(200).json(result);
 };
 
