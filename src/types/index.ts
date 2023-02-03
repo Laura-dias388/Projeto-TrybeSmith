@@ -14,6 +14,6 @@ export type Users = {
 
 export type Orders = {
   id?: number;
-  productIds: number;
+  productsIds: number[];
   userId: number;
 };

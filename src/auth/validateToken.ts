@@ -21,12 +21,12 @@ export const createToken = (loginWithoutPassword: TypeToken) => {
 
 export const validateToken = (token: string) => {
   try {
-    if (!token) return { error: 'Token not found' };
-    const validation = jwt.verify(token, secret);
-    if (!jwtConfig.expiresIn) return { error: 'Expired or invalid token' };
-    return validation;
-  } catch (err) {
-    return err;
+    const decoded = jwt.verify(token, secret);
+    return decoded;
+
+  } catch (error) {
+
+    return false;
   }
 };
 
